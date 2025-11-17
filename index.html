@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendify - Clothing Store</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1 class="logo">Trendify</h1>
+        <input type="text" id="searchInput" placeholder="Search for clothes..." />
+        <div class="buttons">
+            <button id="loginBtn">Login</button>
+            <button id="cartBtn">Cart 🛒 (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <section class="filters">
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="kids">Kids</option>
+        </select>
+        <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="low">Below ₹500</option>
+            <option value="mid">₹500 - ₹1000</option>
+            <option value="high">Above ₹1000</option>
+        </select>
+    </section>
+
+    <section id="productList" class="products"></section>
+
+    <div id="productPopup" class="popup hidden">
+        <div class="popup-content">
+            <span id="closePopup">×</span>
+            <img id="popupImg" />
+            <h2 id="popupTitle"></h2>
+            <p id="popupPrice"></p>
+            <p id="popupDesc"></p>
+            <button id="popupAddToCart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
